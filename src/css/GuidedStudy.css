@@ -1,0 +1,177 @@
+.guided-study {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.guided-study h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.session-setup {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.goal-input {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.goal-input input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.goal-input button {
+  min-width: 60px;
+}
+
+.goals-list {
+  list-style: none;
+  padding: 0;
+}
+
+.goals-list li {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 5px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.goals-list li.completed {
+  opacity: 0.7;
+  text-decoration: line-through;
+  background-color: #e8f5e9;
+}
+
+.goals-list input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.timers-section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timer-controls {
+  text-align: center;
+}
+
+.timer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.timer-button,
+.pomodoro-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.timer-button {
+  background-color: #4285f4;
+  color: white;
+}
+
+.timer-button:hover {
+  background-color: #3367d6;
+}
+
+.timer-button.active {
+  background-color: #f44336;
+}
+
+.timer-button.active:hover {
+  background-color: #d32f2f;
+}
+
+.pomodoro-button {
+  background-color: #0f9d58;
+  color: white;
+}
+
+.pomodoro-button:hover {
+  background-color: #0b8043;
+}
+
+.pomodoro-button.active {
+  background-color: #f44336;
+}
+
+.pomodoro-button.active:hover {
+  background-color: #d32f2f;
+}
+
+.session-actions {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.save-button {
+  background-color: #4285f4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.save-button:hover {
+  background-color: #3367d6;
+}
+
+.save-message {
+  margin-left: 15px;
+  color: #0f9d58;
+  font-weight: 500;
+  animation: fadeOut 2s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}

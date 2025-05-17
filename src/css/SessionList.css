@@ -1,0 +1,124 @@
+.sessions-list {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sessions-list h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.sessions-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.session-item {
+  margin-bottom: 12px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.session-link {
+  display: block;
+  padding: 12px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.session-link:hover {
+  background-color: #f9f9f9;
+}
+
+.session-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.session-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #4285f4;
+}
+
+.session-actions {
+  display: flex;
+}
+
+.delete-btn {
+  background: none;
+  color: #ff5252;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 50%;
+}
+
+.delete-btn:hover {
+  background-color: #ffebee;
+}
+
+.session-details {
+  display: flex;
+  font-size: 0.85rem;
+  color: #666;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.mode {
+  background-color: #e8f5e9;
+  padding: 2px 8px;
+  border-radius: 20px;
+  color: #388e3c;
+}
+
+.mode.non-guided {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.duration {
+  display: inline-flex;
+  align-items: center;
+}
+
+.duration::before {
+  content: "⏱";
+  margin-right: 4px;
+}
+
+.date {
+  display: inline-flex;
+  align-items: center;
+}
+
+.date::before {
+  content: "📅";
+  margin-right: 4px;
+}
+
+.session-goals {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.no-sessions {
+  color: #888;
+  font-style: italic;
+  text-align: center;
+  padding: 15px 0;
+}

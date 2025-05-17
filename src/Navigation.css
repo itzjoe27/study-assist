@@ -1,0 +1,39 @@
+.navigation {
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.navigation li {
+  margin-right: 20px;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 0;
+  display: inline-block;
+}
+
+.navigation a:hover {
+  color: #4285f4;
+}
+
+@media (max-width: 600px) {
+  .navigation ul {
+    flex-direction: column;
+  }
+  
+  .navigation li {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}

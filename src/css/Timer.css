@@ -1,0 +1,52 @@
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.timer-display {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 15px 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.time {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  font-family: monospace;
+}
+
+.pomodoro-info {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.phase {
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #4285f4;
+  margin-bottom: 5px;
+}
+
+.count {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Different colors for different phases */
+.timer-display.work {
+  background-color: #e8f5e9;
+}
+
+.timer-display.short-break {
+  background-color: #e3f2fd;
+}
+
+.timer-display.long-break {
+  background-color: #e0f7fa;
+}
