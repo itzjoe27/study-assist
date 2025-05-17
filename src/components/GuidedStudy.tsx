@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MaterialLinks from './MaterialLinks';
 import Timer from './Timer.tsx';
-import useSessionManager, { StudyGoal } from './useSessionManager';
+import useSessionManager, { type StudyGoal } from './useSessionManager';
 import '../css/GuidedStudy.css';
 
 interface PomodoroSettings {
@@ -18,7 +18,7 @@ const GuidedStudy: React.FC = () => {
   const [nextTimeGoals, setNextTimeGoals] = useState('');
   const [isTimerActive, setIsTimerActive] = useState(false);
   const [isPomodoroActive, setIsPomodoroActive] = useState(false);
-  const [timerMode, setTimerMode] = useState<'standard' | 'pomodoro'>('standard');
+  const [TimerMode, setTimerMode] = useState<'standard' | 'pomodoro'>('standard');
   const [standardTimerDuration, setStandardTimerDuration] = useState(25 * 60); // 25 minutes
   const [pomodoroSettings, setPomodoroSettings] = useState<PomodoroSettings>({
     workDuration: 25 * 60, // 25 minutes
@@ -112,28 +112,28 @@ const GuidedStudy: React.FC = () => {
     setTimeout(() => setSaveMessage(''), 2000);
   };
 
-  // Handle timer completion
+  // Handle Timer completion
   const handleTimerComplete = () => {
-    if (timerMode === 'pomodoro') {
+    if (TimerMode === 'pomodoro') {
       setPomodoroCount(prev => prev + 1);
     }
-    // Auto-save on timer completion
+    // Auto-save on Timer completion
     saveCurrentSession();
   };
 
-  // Handle timer tick to track elapsed time
+  // Handle Timer tick to track elapsed time
   const handleTimerTick = () => {
     setElapsedTime(prev => prev + 1);
   };
 
-  // Toggle standard timer
+  // Toggle standard Timer
   const toggleTimer = () => {
     setTimerMode('standard');
     setIsPomodoroActive(false);
     setIsTimerActive(!isTimerActive);
   };
 
-  // Toggle Pomodoro timer
+  // Toggle Pomodoro Timer
   const togglePomodoro = () => {
     setTimerMode('pomodoro');
     setIsPomodoroActive(!isPomodoroActive);
@@ -141,11 +141,11 @@ const GuidedStudy: React.FC = () => {
   };
 
   // Format time (seconds) to MM:SS
-  const formatTime = (seconds: number): string => {
-    const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-  };
+  // const formatTime = (seconds: number): string => {
+  //   const mins = Math.floor(seconds / 60);
+  //   const secs = seconds % 60;
+  //   return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+  // };
 
   return (
     <div className="guided-study">
@@ -201,27 +201,27 @@ const GuidedStudy: React.FC = () => {
         </div>
       </div>
       
-      <div className="timers-section">
-        <div className="timer-controls">
+      <div className="Timers-section">
+        <div className="Timer-controls">
           <h3>Timers</h3>
           
           {(isTimerActive || isPomodoroActive) && (
             <Timer 
               isRunning={isTimerActive || isPomodoroActive}
               initialSeconds={standardTimerDuration}
-              mode={timerMode}
+              mode={TimerMode}
               pomodoroConfig={pomodoroSettings}
               onComplete={handleTimerComplete}
               onTick={handleTimerTick}
             />
           )}
           
-          <div className="timer-buttons">
+          <div className="Timer-buttons">
             <button 
-              className={`timer-button ${isTimerActive && timerMode === 'standard' ? 'active' : ''}`}
+              className={`Timer-button ${isTimerActive && TimerMode === 'standard' ? 'active' : ''}`}
               onClick={toggleTimer}
             >
-              {isTimerActive && timerMode === 'standard' ? 'Pause Timer' : 'Start Timer'}
+              {isTimerActive && TimerMode === 'standard' ? 'Pause Timer' : 'Start Timer'}
             </button>
             
             <button 

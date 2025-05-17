@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../css/Timer.css'; // We'll create this next
+import '../css/Timer.css'; 
 
 export interface TimerProps {
   initialSeconds?: number;
@@ -92,7 +92,7 @@ const Timer: React.FC<TimerProps> = ({
     }
   };
 
-  // Reset the timer with new configuration
+  // Reset the Timer with new configuration
   useEffect(() => {
     if (mode === 'standard') {
       setSeconds(initialSeconds);
@@ -109,8 +109,8 @@ const Timer: React.FC<TimerProps> = ({
   };
 
   return (
-    <div className="timer">
-      <div className="timer-display">
+    <div className="Timer">
+      <div className="Timer-display">
         <span className="time">{formatTime()}</span>
         {mode === 'pomodoro' && (
           <div className="pomodoro-info">

@@ -37,7 +37,7 @@ const SettingsPage: React.FC = () => {
               checked={settings.autoStartTimers}
               onChange={(e) => updateSettings({ autoStartTimers: e.target.checked })}
             />
-            Auto-start timers after setup
+            Auto-start Timers after setup
           </label>
         </div>
         

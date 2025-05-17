@@ -1,11 +1,11 @@
-.timer {
+.Timer {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px 0;
 }
 
-.timer-display {
+.Timer-display {
   background-color: #f5f5f5;
   border-radius: 8px;
   padding: 15px 25px;
@@ -39,14 +39,14 @@
 }
 
 /* Different colors for different phases */
-.timer-display.work {
+.Timer-display.work {
   background-color: #e8f5e9;
 }
 
-.timer-display.short-break {
+.Timer-display.short-break {
   background-color: #e3f2fd;
 }
 
-.timer-display.long-break {
+.Timer-display.long-break {
   background-color: #e0f7fa;
 }

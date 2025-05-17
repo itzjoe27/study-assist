@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import MaterialLinks from './MaterialLinks';
-import Timer from './Timer';
+import Timer from './Timer.tsx';
 import useSessionManager from './useSessionManager';
 import '../css/NonGuidedStudy.css';
 
@@ -38,10 +38,10 @@ const NonGuidedStudy: React.FC = () => {
     return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   };
 
-  // Toggle timer
+  // Toggle Timer
   const toggleTimer = () => {
     if (!isRunning) {
-      // Starting timer - create a session if one doesn't exist
+      // Starting Timer - create a session if one doesn't exist
       if (!currentSessionId) {
         saveCurrentSession();
       }
@@ -49,7 +49,7 @@ const NonGuidedStudy: React.FC = () => {
     setIsRunning(!isRunning);
   };
 
-  // Handle timer tick (update elapsed time)
+  // Handle Timer tick (update elapsed time)
   const handleTimerTick = () => {
     setElapsedTime(prev => prev + 1);
   };
@@ -117,7 +117,7 @@ const NonGuidedStudy: React.FC = () => {
         </div>
       </div>
       
-      <div className="timer-section">
+      <div className="Timer-section">
         <h3>Session Timer</h3>
         
         {isRunning ? (
@@ -128,13 +128,13 @@ const NonGuidedStudy: React.FC = () => {
             initialSeconds={0}
           />
         ) : (
-          <div className="timer-display">
+          <div className="Timer-display">
             <span className="time">{formatTime(elapsedTime)}</span>
           </div>
         )}
         
         <button 
-          className={`timer-button ${isRunning ? 'active' : ''}`}
+          className={`Timer-button ${isRunning ? 'active' : ''}`}
           onClick={toggleTimer}
         >
           {isRunning ? 'Pause' : 'Start'}

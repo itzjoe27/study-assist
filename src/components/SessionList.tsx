@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useSessionManager, { StudySession } from './useSessionManager';
+import useSessionManager, { type StudySession } from './useSessionManager';
 import '../css/SessionList.css';
 
 interface SessionsListProps {

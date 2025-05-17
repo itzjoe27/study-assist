@@ -79,7 +79,7 @@
   margin-right: 10px;
 }
 
-.timers-section {
+.Timers-section {
   background-color: #fff;
   border-radius: 8px;
   padding: 20px;
@@ -87,18 +87,18 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.timer-controls {
+.Timer-controls {
   text-align: center;
 }
 
-.timer-buttons {
+.Timer-buttons {
   display: flex;
   justify-content: center;
   gap: 15px;
   margin-top: 20px;
 }
 
-.timer-button,
+.Timer-button,
 .pomodoro-button {
   padding: 10px 20px;
   font-size: 16px;
@@ -108,20 +108,20 @@
   transition: background-color 0.2s;
 }
 
-.timer-button {
+.Timer-button {
   background-color: #4285f4;
   color: white;
 }
 
-.timer-button:hover {
+.Timer-button:hover {
   background-color: #3367d6;
 }
 
-.timer-button.active {
+.Timer-button.active {
   background-color: #f44336;
 }
 
-.timer-button.active:hover {
+.Timer-button.active:hover {
   background-color: #d32f2f;
 }
 
